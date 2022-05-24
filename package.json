@@ -1,0 +1,14 @@
+{
+	"name": "postman",
+	"version": "8.5.1",
+	"description": "postmanrestapi",
+	"scripts": {
+		"testapilocal": "newman run DemoBook.postman_collection.json -e Local.postman_environment.json
+		-r junit,cli --reporter-junit-export result-tests-local.xml",
+		"testapiQA": "newman run DemoBook.postman_collection.json -e QA.postman_environment.json -r
+		junit,cli --reporter-junit-export result-tests-qa.xml"
+	},
+	"devDependencies": {
+		"newman": "^5.2.2"
+	}
+}
